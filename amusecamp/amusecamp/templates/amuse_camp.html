@@ -1,0 +1,404 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Amuse Ke - Fitness Boot Camp · Gym/Physical Fitness Center">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Title -->
+  <title>Amuse Camp:Creating Fun and Enriching Opportunities</title>
+
+
+
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'website/img/core-img/amuse.png' %}">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="{% static 'website/css/style2.css' %}">
+
+
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preload-content">
+      <div id="dento-load"></div>
+    </div>
+  </div>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area">
+    <!-- Top Header Area -->
+    <div class="top-header-area">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <!-- Top Content -->
+          <div class="col-6 col-md-9 col-lg-8">
+            <div class="top-header-content">
+              <a href="#" data-toggle="tooltip" data-placement="bottom" title="Nairobi, Kenya"><i class="fa fa-map-marker"></i> <span>Nairobi, Kenya</span></a>
+              <a href="#" data-toggle="tooltip" data-placement="bottom" title="info.dento@gmail.com"><i class="fa fa-envelope"></i> <span>info.dento@gmail.com</span></a>
+            </div>
+          </div>
+          <!-- Top Header Social Info -->
+          <div class="col-6 col-md-3 col-lg-4">
+            <div class="top-header-social-info text-right">
+              <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
+              
+              <a href="#" data-toggle="tooltip" data-placement="bottom" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+              <a href="#" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Top Header End -->
+
+    <!-- Main Header Start -->
+    <div class="main-header-area">
+      <div class="classy-nav-container breakpoint-off">
+        <div class="container">
+          <!-- Classy Menu -->
+          <nav class="classy-navbar justify-content-between" id="dentoNav">
+
+            <!-- Logo -->
+            <a class="nav-brand" href="{% url 'home' %}"><img src="{% static 'website//img/core-img/pink.png' %}" alt=""></a>
+
+            <!-- Navbar Toggler -->
+            <div class="classy-navbar-toggler">
+              <span class="navbarToggler"><span></span><span></span><span></span></span>
+            </div>
+
+            <!-- Menu -->
+            <div class="classy-menu">
+
+              <!-- Close Button -->
+              <div class="classycloseIcon">
+                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+              </div>
+
+              <!-- Nav Start -->
+              <div class="classynav">
+                <ul id="nav">
+                  <li><a href="{% url 'home' %}">Home</a></li>
+                  <li><a href="{% url 'amuse_camp' %}">Amuse Camp</a></li>
+                  <li><a href="{% url 'about' %}">About Us</a></li>
+                  <li><a href="{% url 'activities' %}">activities</a></li>
+                  <li><a href="{% url 'blog_index' %}">Blog</a>
+
+                  
+                  <li><a href="./contact.html">Contact</a></li>
+                </ul>
+              </div>
+              <!-- Nav End -->
+            </div>
+
+            <!-- Booking Now Button -->
+            <a style="background-color: #960896" href="#" class="btn dento-btn booking-btn">Book Now</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <!-- ***** Breadcrumb Area Start ***** -->
+  <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url({% static 'website/img/bg-img/amuse2.jpg' %});">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12">
+          <h2 class="title">Amuse Camp</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="breadcumb--con">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Contact</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Breadcrumb Area End ***** -->
+
+  <!-- ***** Events Board Area start ***** -->
+  <center>
+    <h1>Events Board</h1>
+    <small>Have A Glance At Our Coming Events Here</small>
+    <hr/>
+  </center>
+    <div class="container">
+        <div class="row">
+      {% for x in pics %}
+      <div class="col-3" style="text-align: center;">  
+      <img src="{{ x.image.url }}" class="img-thumbnail" alt="Responsive image" width="400" height="500">
+      <br/>
+      <p class="lead">{{x.caption}}</p>
+      <hr>
+      </div>
+      {% endfor %}
+    </div>
+    </div>
+
+    <!-- ***** Events Board Area end ***** -->
+    
+  
+
+    <!-- ****** About Us Area Start ******* -->
+  <section class="dento-about-us-area section-padding-100-0">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- About Us Thumbnail -->
+        <div class="col-12 col-md-6">
+          <div class="about-us-thumbnail mb-50">
+            <img src="{% static 'website/img/bg-img/abt2.jpg' %}" alt="">
+          </div>
+        </div>
+        <!-- About Content -->
+        <div class="col-12 col-md-6">
+          <div class="about-us-content mb-50">
+            <!-- Section Heading -->
+            <div class="section-heading">
+              <h2>About Amuse Camp</h2>
+              <div class="line"></div>
+            </div>
+            <p>We pride in providing a great way to keep your children actively engaged through exercise, fun obstacle course challenges, different themed nature scavenger hunts, socialising and working together in a very diverse group of other kids, learning and above all experiencing fun through both structured and non structured activities the way kids love.All you've gotta  do is sign them up, drop them at 9am and pick them up at 12pm. We will have made great use of the time and their energy.Get in touch with us if you have any queries.</p>   
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ****** About Us Area End ****** -->
+
+   <!-- *****Amuse Camp Gallery Area start ***** -->
+  <center>
+    <h1>Amuse Camp Gallery</h1>
+    <small>Browse Through Our Past Experiences Here</small>
+    <hr/>
+  </center>
+    <div class="container">
+        <div class="row">
+          {% for x in snaps %}
+            <div class="col-3" style="text-align: center;">  
+              <img src="{{ x.photo.url }}" class="img-thumbnail" alt="Responsive image" width="300" height="400">
+              <br/>
+              <p class="lead">{{x.description}}</p>
+              <hr>
+            </div>
+          {% endfor %}
+        </div>
+    </div>
+    <br/><br/>
+
+    <!-- *****Amuse Camp Gallery Area end ***** -->
+
+    <!-- ***** Lost And Found Area start ***** -->
+    <center>
+    <h1>Lost And Found Items</h1>
+    <small>Did A Loved One Lose Anything At A Previous Event?</small><br/>
+    <small>Scroll Through Below And Contact Us..</small>
+    <hr/>
+  
+    <li>
+          {% for x in found %}
+            <li>
+              <h2><p class="lead">{{x.item}}</p></h2>
+            </li>  
+         <hr>
+            
+          {% endfor %}
+        
+    </li>
+    </center>
+    <br/><br/>
+
+    <!-- ***** Lost And Found Area end ***** -->
+
+    <!-- Book A Session Area Start -->
+  <section class="book-an-oppointment-area section-padding-100 bg-img bg-gradient-overlay jarallax clearfix" style="background-image: url('{% static 'website/img/bg-img/amuse1.jpg' %}');">
+    <div class="container">
+      <div class="row">
+        <!-- Section Heading -->
+        <div class="col-12">
+          <div class="section-heading text-center white">
+            <h2>Book A Session</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <!-- Appointment Form -->
+          <div class="appointment-form">
+            <form action="#" method="post">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group mb-30">
+                    <input type="text" name="your-name" class="form-control" placeholder="Your Name" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group mb-30">
+                    <input type="text" name="your-phone" class="form-control" placeholder="Your Phone" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group mb-30">
+                    <input type="email" name="your-email" class="form-control" placeholder="Your Email" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group mb-30">
+                    <input type="text" name="your-address" class="form-control" placeholder="Your Address">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group mb-30">
+                    <select name="your-scheldule" class="form-control">
+                      <option value="Choose Your Scheldule">Choose Your Scheldule</option>
+                      <option value="9 AM to 10 AM">9 AM to 12 PM</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group mb-30">
+                    <select name="your-time" class="form-control">
+                      <option value="Choose Your Time">Choose Your Scheldule</option>
+                      <option value="9 AM to 10 AM">9 AM to 12 PM</option>
+                      
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group mb-30">
+                    <textarea name="your-message" class="form-control" placeholder="Your Message"></textarea>
+                  </div>
+                </div>
+                <div class="col-12 text-center">
+                  <button style="background-color: #960896" type="submit" class="btn dento-btn">Book Now</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Book An Oppointment Area End -->
+
+  <br/><br/><br/><br/>
+
+  <!-- ***** Footer Area Start ***** -->
+  <footer class="footer-area bg-img bg-gradient-overlay" style="background-image: url({% static 'website/img/bg-img/amuse1.jpg' %});">
+    <div class="container">
+      <div class="row">
+        <!-- Single Footer Widget -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="single-footer-widget">
+            <a href="{% url 'home' %}" class="d-block mb-4"><img src="{% static 'website/img/core-img/pink.png' %}" alt=""></a>
+            <p>Kids, for natural outdoors and fun activities.Currently doing Amuse camps.</p>
+            <div class="footer-contact">
+              <p><i class="icon_pin"></i> Nairobi, Kenya</p>
+              <p><i class="icon_phone"></i> +254 715 476 250</p>
+              <p><i class="icon_mail"></i> info@amusekenya.org</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Footer Widget -->
+        <div class="col-12 col-sm-6 col-lg">
+          <div class="single-footer-widget">
+            <!-- Widget Title -->
+            <h5 class="widget-title">Opening Hours</h5>
+
+            <!-- Opening Hours -->
+            <ul class="opening-hours">
+              <li><span>Mon-Sun</span><span>8.00-18.00</span></li>
+              
+            </ul>
+          </div>
+        </div>
+
+        <!-- Single Footer Widget -->
+        <div class="col-12 col-sm-6 col-lg">
+          <div class="single-footer-widget">
+            <!-- Widget Title -->
+            <h5 class="widget-title">Quick Link</h5>
+
+            <!-- Quick Links Nav -->
+            <nav>
+              <ul class="quick-links">
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="#">Policy</a></li>
+                <li><a href="{% url 'blog_index' %}">News</a></li> 
+                <li><a href="{% url 'activities' %}">Activities</a></li>   
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Single Footer Widget -->
+        <div class="col-12 col-sm-6 col-lg">
+          <div class="single-footer-widget">
+            <!-- Widget Title -->
+            
+
+            <!-- Social Info -->
+            <div class="footer-social-info">
+              <a href="https://www.facebook.com/Amuse-Kenya-671738633246208/" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
+              <a href="https://twitter.com/amusekenya" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copywrite Area -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="copywrite-content">
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          <br>
+          <p>Designed and put together by Brian Mike | 0706087760</p>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- ***** Footer Area End ***** -->
+
+  <!-- ******* All JS ******* -->
+  <!-- jQuery js -->
+  <script src="{% static 'website/js/jquery.min.js' %}"></script>
+  <!-- Popper js -->
+  <script src="{% static 'website/js/popper.min.js' %}"></script>
+  <!-- Bootstrap js -->
+  <script src="{% static 'website/js/bootstrap.min.js' %}"></script>
+  <!-- All js -->
+  <script src="{% static 'website/js/dento.bundle.js' %}"></script>
+  <!-- Active js -->
+  <script src="{% static 'website/js/default-assets/active.js' %}"></script>
+
+</body>
+
+</html>
